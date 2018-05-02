@@ -1,0 +1,174 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                template="/template/webtemplates.xhtml"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+
+
+    <ui:define name="content">
+
+        <header class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h1 class="brand-heading">Grayscale</h1>
+                            <p class="intro-text">A free, responsive, one page Bootstrap theme.
+                                <br />Created by Start Bootstrap.</p>
+                            <a href="#about" class="btn btn-circle page-scroll">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Connexion</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <a  class = " btn btn-block btn-social btn-google  " >
+                                        <span  class = "fa fa-google "></span> Connectez-vous avec Google
+                                    </a> 
+                                    <a class = " btn btn-block btn-facebook btn-social " >
+                                        <span  class = " fa fa-facebook "> </span> Connectez-vous avec Facebook
+                                    </a> 
+                                </div> 
+
+                                <div class="modal-footer">
+                                    <div class="">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" role="main">
+            <!--wrap-->
+            <div class="wrap clearfix">
+                <!--row-->
+                <div class="row">
+                    <!--content-->
+                    <section class="content center full-width wow fadeInUp">
+                        <div class="modal container">
+                            <h3>Créer votre compte </h3>
+
+                            <h:form >
+                                <div class="f-row">
+                                    <h:outputLabel class="col-md-4 control-label" value="Nom  :" for="Nom" />
+
+                                    <div class="col-md-8">
+                                        <h:inputText id="Nom" class="form-control" value="#{utilisateurController.user.nom}" required="true" 
+                                                     requiredMessage="Veuillez entrer votre Nom" />
+                                        <h:message for="Nom" class="messageError" />
+                                    </div>
+
+                                </div>
+
+
+                                <div class="f-row">
+                                    <h:outputLabel class="col-md-4 control-label" value="Prenom  :" for="Prenom" />
+
+                                    <div class="col-md-8">
+                                        <h:inputText id="Prenom" class="form-control" value="#{utilisateurController.user.prenom}" required="true" 
+                                                     requiredMessage="Veuillez entrer votre prenom" />
+                                        <h:message for="prenom" class="messageError" />
+                                    </div>
+                                </div>
+
+
+
+                                <div class="f-row">
+                                    <h:outputLabel class="col-md-4 control-label" value="Login :" for="Login" />
+
+                                    <div class="col-md-8">
+                                        <h:inputText id="Login" class="form-control" value="#{utilisateurController.user.login}" required="true" 
+                                                     requiredMessage="Veuillez entrer votre Login" />
+                                        <h:message for="Login" class="messageError" />
+                                    </div>
+                                </div>
+
+
+
+                                <div class="f-row">
+                                    <h:outputLabel class="col-md-4 control-label" value="Email :" for="email" />
+
+                                    <div class="col-md-8">
+                                        <h:inputText id="email" class="form-control" value="#{utilisateurController.user.email}" required="true"
+                                                     requiredMessage="Veuillez entrer votre email"/>
+                                        <h:message for="email" class="messageError" />
+                                    </div>
+                                </div>
+
+
+                                <div class="f-row">
+                                    <h:outputLabel class="col-md-4 control-label" value="Code Postal:" for="CodePostal" />
+
+                                    <div class="col-md-8">
+                                        <h:inputText id="Code_Postal" class="form-control" value="#{utilisateurController.user.codePostal}" required="true" 
+                                                     requiredMessage="Veuillez entrer votre Code Postal" />
+                                        <h:message for="Code Postal" class="messageError" />
+                                    </div>
+                                </div>
+
+                                <div class="f-row">
+                                    <h:outputLabel class="col-md-4 control-label" value="password :" for="password" />
+
+                                    <div class="col-md-8">
+                                        <h:inputSecret id="password" class="form-control" value="#{utilisateurController.user.motDePasse}" required="true"
+                                                       requiredMessage="Veuillez entrer votre password"/>
+                                        <h:message for="password" class="messageError"/>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="f-row">
+                                    <div class="col-md-8 col-md-offset-4">
+                                        <h:commandButton class="btn btn-primary" value="Souscrire" action="#{utilisateurController.enreg()}"/>                                    
+                                    </div>
+                                </div>
+                            </h:form>
+                        </div>
+
+
+
+                    </section>
+                </div>
+                <!--//content-->
+            </div>
+            <!--//row-->
+
+            <!--//wrap-->
+        </main>
+
+
+    </ui:define>
+
+</ui:composition>
+
